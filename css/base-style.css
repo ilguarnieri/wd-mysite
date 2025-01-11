@@ -53,6 +53,10 @@ p {
     color: var(--text-green);
 }
 
+.text-light-gray {
+    color: var(--text-light-grey);
+}
+
 /* YELLOW TEST */
 .smooth-yellow-text {
     transition: all 300ms linear;

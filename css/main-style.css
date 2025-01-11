@@ -65,9 +65,20 @@
 
 
 /* CV */
+.cv-container .education h4::before {
+    content: '\f19d';  /* Codice Unicode per l'icona del libro (font-awesome) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;  /* Per le icone di Font Awesome */
+    margin-right: 10px;  /* Distanza tra l'icona e il testo */
+}
 
-
-
+/* Icona Experience */
+.cv-container .experience h4::before {
+    content: '\f0b1';  /* Codice Unicode per l'icona della valigetta (font-awesome) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
 
 
 /* FOOTER */

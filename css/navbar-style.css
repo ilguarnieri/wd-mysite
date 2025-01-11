@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   background-color: var(--background-dark-grey);
   position: fixed;
   z-index: 999;
@@ -113,10 +112,9 @@
   font-weight: 600;
 }
 
-/* Stile per l'elemento attivo */
+/* MENU ITEM ACTIVE */
 .menu-container li.active {
   color: var(--light-yellow);
-  text-decoration: underline;
 }
 
 @media (min-width: 992px) {

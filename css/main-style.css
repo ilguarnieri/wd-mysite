@@ -1,11 +1,11 @@
 @import url(colors.css);
 
-/* JUMBO */
-.jumbo-container {
+/* INTRO */
+.intro-container {
    padding-top: 100px;
 }
 
-.jumbo-container .jumbo-image {
+.intro-container .intro-image {
     max-width: 350px;
 }
 
@@ -62,10 +62,6 @@
         transform: scale(1);
     }
 }
-
-
-/* CV */
-
 
 
 /* FOOTER */

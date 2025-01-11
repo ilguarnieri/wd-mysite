@@ -64,4 +64,34 @@
 }
 
 
+
 /* CV */
+
+
+
+
+
+/* FOOTER */
+.footer-container h5 {
+    font-size: 17px;
+    position: relative;
+}
+
+.footer-container h5::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 180px;
+    background-color: var(--text-green);
+    margin-right: 5px;
+    top: 19px;
+    left: -17px;
+}
+
+.footer-container p {
+    font-size: 12px;
+}
+
+.footer-container .logo-footer {
+    width: 40px;
+}

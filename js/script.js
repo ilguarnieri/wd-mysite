@@ -3,6 +3,7 @@ const body = document.body;
 const navMenu = document.querySelector('.menu-mobile');
 const burgerMenu = document.querySelector('.burger-menu');
 const menuItems = document.querySelectorAll('.menu-mobile li');
+const imageSkillList = document.querySelectorAll('.skills-container .row .col-3 img')
 
 // Handle window width changes
 function updateMenuLayout() {
@@ -42,10 +43,22 @@ function initEventListeners() {
     menuItems.forEach(item => item.addEventListener('click', handleMenuItemClick));
 }
 
+function addDelayAnimationImages(){
+    imageSkillList.forEach((image, i ) => {
+        const randomDelay = generateRandomNumber(0.5, 3.5);
+        image.style.animationDelay = `${randomDelay}s`;
+    })
+}
+
+function generateRandomNumber(min, max) {
+    return (Math.random() * (max - min) + min).toFixed(2);
+}
+
 // Initialization
 function init() {
     updateMenuLayout();
     initEventListeners();
+    addDelayAnimationImages();
 }
 
 // Start the script

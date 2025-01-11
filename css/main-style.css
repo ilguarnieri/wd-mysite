@@ -35,14 +35,9 @@
     line-height: 25px;
 }
 
-.skills-container .container .row .col-3 img {
+.skills-container .row .col-3 img {
     animation: zoomInOut 3s ease-in-out infinite;
 }
-/* 
-.skills-container .container .row .col-3:nth-child(odd) img {
-    animation-delay: 2s;
-} */
-
 
 @media (min-width: 1025px) {
     .main-heading {
@@ -59,7 +54,7 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.15);
+        transform: scale(1.07);
     }
     100% {
         transform: scale(1);

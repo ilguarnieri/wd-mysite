@@ -64,7 +64,6 @@
 }
 
 
-
 /* CV */
 
 
@@ -110,5 +109,6 @@
 
     .footer-contact .logo-footer:hover {
         transform: scale(1.1);
+        filter: brightness(1.1);
     }
 }

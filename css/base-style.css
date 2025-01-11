@@ -107,6 +107,7 @@ p {
 
 .btn-custom:disabled {
     opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .btn-custom:disabled:hover {

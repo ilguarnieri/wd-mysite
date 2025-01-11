@@ -35,6 +35,8 @@
     line-height: 25px;
 }
 
+
+/* SKILLS */
 .skills-container .row .col-3 img {
     animation: zoomInOut 3s ease-in-out infinite;
 }
@@ -54,9 +56,12 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(1.07);
+        transform: scale(1.08);
     }
     100% {
         transform: scale(1);
     }
 }
+
+
+/* CV */

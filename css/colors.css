@@ -9,4 +9,5 @@
     --gradient-yellow: linear-gradient(to right, #FECC1B 0%, #FFB029 100%);
     --gradient-yellow-reverse: linear-gradient(to right, #FFB029 0%, #FECC1B 100%);
     --text-green: #3ead75;
+    --shadow-green: #3ead758b;
 }

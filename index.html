@@ -78,7 +78,6 @@
                 <div class="col-12 col-sm-6 text-center">
                     <img class="jumbo-image" src="images/photo_ag.png" alt="Angelo Guarnieri" />
                 </div>
-
             </div>
         </div>
     </section>
@@ -167,17 +166,21 @@
         </div>
     </section>
 
-    <div class="wave_close"></div>
+    <div class="wave_close mb-5 mb-md-0"></div>
 
     <!-- CONTACT -->
     <section id="contact" class="contact-container overflow-hidden py-4 py-md-5">
         <div class="container-xxl px-4 px-md-5">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-lg-5">
 
                 <!-- Contact Description -->
                 <div class="col-12 col-lg-6">
                     <p class="intro-text">My Skills</p>
                     <h1 class="m-0 text-black mb-3">Get in touch with me</h1>
+
+
+
+
                 </div>
 
                 <!-- Form di contatto -->
@@ -186,18 +189,18 @@
                         <div class="mb-3 row">
                             <div class="col-12 col-sm-6">
                                 <label for="name" class="form-label">Full name</label>
-                                <input type="text" class="form-control" id="name" name="name">
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email">
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        <button id="submitBtn" type="submit" class="btn-custom w-100" disabled>Send Message</button>
                     </form>
                 </div>
             </div>
@@ -207,7 +210,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <div class="wave_open"></div>
+    <div class="wave_open mt-5"></div>
 </footer>
 
 <!-- JS -->

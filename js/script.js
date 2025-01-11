@@ -5,6 +5,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const menuItems = document.querySelectorAll('.menu-mobile li');
 const imageSkillList = document.querySelectorAll('.skills-container .row .col-3 img')
 const contactForm =  document.getElementById('contactForm');
+const submitButton = document.getElementById('submitBtn');
 
 // Handle window width changes
 function updateMenuLayout() {
@@ -65,18 +66,22 @@ function  initEmailJS(){
     emailjs.init("FoSYNKe0_5ndJU-w7");
 }
 
+// Check valid form
+function checkFormValidity() {
+    if (contactForm.checkValidity()) {
+        submitButton.removeAttribute('disabled');
+    } else {
+        submitButton.setAttribute('disabled', 'true');
+    }
+}
+
 // Send email
-async function sendEmail(event){
+async function sendEmail(event, sendingStatus){
     event.preventDefault();
     const formData = event.target.elements;
     const name = formData.name.value;
     const email = formData.email.value;
     const message = formData.message.value;
-
-    const sendingStatus = document.createElement('p');
-    sendingStatus.classList.add('yellow-gradient-text', 'm-0');
-    sendingStatus.innerText = 'Sending...';
-    contactForm.append(sendingStatus);
 
     try{
         await emailjs.send("service_ostfstp", "template_dwh8uzb", {
@@ -87,13 +92,16 @@ async function sendEmail(event){
 
         sendingStatus.innerText = "Message sent successfully! Thank you for getting in touch!";
         sendingStatus.classList.replace('yellow-gradient-text', 'text-green');
+
+        formData.name.value = '';
+        formData.email.value = '';
+        formData.message.value = '';
     } catch (e){
         sendingStatus.innerText = "Oops! Something went wrong. Please try again later.";
-        sendingStatus.classList.replace('yellow-gradient-text', 'text-danger')
+        sendingStatus.classList.replace('yellow-gradient-text', 'text-danger');
     }
+
 }
-
-
 
 // Initialization
 function init() {
@@ -101,9 +109,20 @@ function init() {
     initEventListeners();
     addDelayAnimationImages();
     initEmailJS();
+   checkFormValidity();
 
+    contactForm.addEventListener('input', checkFormValidity);
     contactForm.addEventListener('submit', async function(event) {
-        await sendEmail(event);
+        const sendingStatus = document.createElement('p');
+        sendingStatus.classList.add('yellow-gradient-text', 'm-0');
+        sendingStatus.innerText = 'Sending...';
+        contactForm.append(sendingStatus);
+
+        await sendEmail(event, sendingStatus);
+
+        setTimeout(() => {
+            sendingStatus.remove();
+        }, 4000);
     });
 }
 

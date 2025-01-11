@@ -105,6 +105,23 @@ p {
     background: var(--gradient-yellow-reverse);
 }
 
+.btn-custom:disabled {
+    opacity: 0.5;
+}
+
+.btn-custom:disabled:hover {
+    background: var(--gradient-yellow);
+}
+
+
+
+/* INPUT FORM */
+.form-control:focus {
+    border-color: var(--text-green);
+    box-shadow: 0 0 8px .25rem var(--shadow-green);
+}
+
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 12px;
@@ -119,4 +136,3 @@ p {
     border-bottom-left-radius: 9999px;
     background: var(--text-green);
 }
-

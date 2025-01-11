@@ -96,10 +96,6 @@
   transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
 
-.menu-container .menu-mobile li:hover {
-  letter-spacing: 0.2rem;
-}
-
 .menu-container .menu-mobile.show {
   opacity: 1;
   transform: translateY(0);
@@ -123,8 +119,7 @@
   text-decoration: underline;
 }
 
-
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   .navbar .burger-menu {
       display: none;
   }

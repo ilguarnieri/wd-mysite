@@ -95,3 +95,20 @@
 .footer-container .logo-footer {
     width: 40px;
 }
+
+
+@media (min-width: 992px) {
+    .footer-contact{
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+
+    .footer-contact .logo-footer {
+        transition: transform 200ms ease-in-out;
+    }
+
+    .footer-contact .logo-footer:hover {
+        transform: scale(1.1);
+    }
+}

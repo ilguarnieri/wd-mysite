@@ -9,7 +9,7 @@ const submitButton = document.getElementById('submitBtn');
 
 // Handle window width changes
 function updateMenuLayout() {
-    if (window.innerWidth > 1025) {
+    if (window.innerWidth > 991) {
         resetMobileMenu();
         navMenu.classList.replace('menu-mobile', 'menu-desktop');
     } else {
@@ -36,7 +36,7 @@ function toggleMobileMenu() {
 function handleMenuItemClick() {
     menuItems.forEach(item => item.classList.remove('active'));
     this.classList.add('active');
-    if (window.innerWidth <= 1025) {
+    if (window.innerWidth <= 991) {
         toggleMobileMenu();
     }
 }

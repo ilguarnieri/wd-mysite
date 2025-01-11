@@ -1,0 +1,67 @@
+@import url(colors.css);
+
+/* JUMBO */
+.jumbo-container {
+   padding-top: 100px;
+}
+
+.jumbo-container .jumbo-image {
+    max-width: 350px;
+}
+
+.intro-text {
+    color: var(--text-green);
+    font-weight: 500;
+}
+
+.intro-text::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    width: 15px;
+    background-color: var(--text-green);
+    margin-right: 5px;
+    top: -5px;
+}
+
+.main-heading {
+    font-size: calc(20px + 5vw);
+    font-weight: bold;
+}
+
+.description-text {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.skills-container .container .row .col-3 img {
+    animation: zoomInOut 3s ease-in-out infinite;
+}
+
+.skills-container .container .row .col-3:nth-child(odd) img {
+    animation-delay: 2s;
+}
+
+
+@media (min-width: 1025px) {
+    .main-heading {
+        font-size: 80px;
+    }
+
+    .description-text {
+        font-size: 16px;
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
